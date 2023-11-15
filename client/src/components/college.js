@@ -56,8 +56,7 @@ export default function College({data}){
                 />
                 <div className="d-flex justify-content-center w-100">
                     <Button 
-                        variant="primary" 
-                        onClick={addDelStudent} 
+                        variant="primary"
                         type="submit">
                             {type === true ? ("Add") : ("Remove")} student
                     </Button>
