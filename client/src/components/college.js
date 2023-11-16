@@ -28,14 +28,16 @@ export default function College({data}){
     }
     return(
         <>
-        <div className="mx-auto w-25 h-50 d-flex flex-column">
+        <div className="mx-auto w-25 h-50 d-flex flex-column border border-primary p-3">
             <Button variant="primary" onClick={addDelStudent}  className="mt-1">Change form function</Button>
-            <form onSubmit={updateStudents}>
+            <form onSubmit={updateStudents} className="mt-2">
                 <input
                     type="text"
                     className="form-control"
                     id="name"
                     value={form.name}
+                    placeholder="Enter student name"
+                    maxLength="15"
                     onChange={(e) => updateForm({ name: e.target.value })}
                 />
                 <br />
@@ -44,6 +46,7 @@ export default function College({data}){
                     className="form-control"
                     id="age"
                     value={form.age}
+                    placeholder="Enter student age"
                     onChange={(e) => updateForm({ age: e.target.value })}
                 />
                 <br />
@@ -52,9 +55,10 @@ export default function College({data}){
                     className="form-control"
                     id="course"
                     value={form.course}
+                    placeholder="Enter student course"
                     onChange={(e) => updateForm({ course: e.target.value })}
                 />
-                <div className="d-flex justify-content-center w-100">
+                <div className="d-flex justify-content-center w-100 mt-2">
                     <Button 
                         variant="primary"
                         type="submit">
